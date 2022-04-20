@@ -1,0 +1,13 @@
+START:
+	ret<-0
+	current=head
+	while current!=nullptr
+		current_in=current.l
+		while current_in!=nullptr
+			ret++
+			current_in<-(current_in->next)
+		end-while
+		current<-(current->next)
+	end-while
+	return ret
+END

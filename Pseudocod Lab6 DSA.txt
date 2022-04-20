@@ -1,0 +1,27 @@
+START subalgorithm setCurrent(new_val)
+	//params: TElem
+	if(multime.search(new_val)==true) do:
+		throw exception
+	end-if
+	if(!valid())
+		throw exception
+	end-if
+	current_node.val <- new_val
+END subalgorithm
+		
+
+START sublgorithm recursive_search_unsorted(node,elem)
+	//params: Node*,TComp
+	if(node==nullptr)
+		return false;
+	if(node->val==elem)
+		return true;
+	return(recursive_search_unsorted(node->left,elem)||recursive_search_unsorted(node->right,elem);
+END subalgorithm
+
+START subalgorithm search_unsorted_tree(elem)
+	//params: TComp
+	if(isEmpty())
+		return false;
+	return recursive_search_unsorted(head,elem);
+END subalgorithm

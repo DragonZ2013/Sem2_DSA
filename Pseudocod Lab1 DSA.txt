@@ -1,0 +1,9 @@
+Start:
+	//this -> bag to remove from
+	//other -> bag to choose remove
+	bi=other.iterator
+	While bi.valid()
+		this.remove(bi.getCurrent());
+		bi.next()
+	end-while
+End

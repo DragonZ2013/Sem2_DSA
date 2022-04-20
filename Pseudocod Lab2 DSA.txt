@@ -1,0 +1,11 @@
+START:
+	//params: ret[]
+	it<-this.iterator
+	i<-0
+	ret[this.size()]
+	while(it.valid())
+		ret[i++]=it.getCurrent().first;
+		it.next();
+	end-while
+END
+		

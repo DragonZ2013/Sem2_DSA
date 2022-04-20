@@ -1,0 +1,13 @@
+START subalgorithm count_key(c):
+	//params: TKey
+	ret<-0
+	pos<-hash(c)
+	currentNode<-Elements[pos]
+	while(currentNode!=nullptr) execute:
+		if(currentNode-<elem.first==c)
+			ret++;
+		end-if
+		currentNode=currentNode->next;
+	end-while
+	return ret
+END subalgorithm

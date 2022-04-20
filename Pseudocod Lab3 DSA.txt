@@ -1,0 +1,12 @@
+subalgorithm k_loschen(SLLA,k) is:
+	cont<-1
+	ListIterator it
+	while(it.valid()) execute:
+		if(cont%k=0)
+			remove(it)
+		else
+			it.next()
+		end-if
+		cont<-cont+1
+	end-while
+end-subalgorithm
